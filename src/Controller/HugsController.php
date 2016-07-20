@@ -38,6 +38,8 @@ class HugsController extends ControllerBase {
    *   Return Hello string.
    */
   public function hug($from, $to, $count) {
+    // TODO: clear the ServiceBlock block cache before addHug()
+
     $this->hugTracker->addHug($to);
     if (!$count) {
       $count = $this->config('hugs.HugConfig')->get('count');
