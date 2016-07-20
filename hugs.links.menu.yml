@@ -1,0 +1,7 @@
+hugs.hug_config_form:
+  title: 'Hugs configuration'
+  route_name: hugs.hug_config_form
+  description: 'Configure the hugs system'
+  parent: system.admin_config_system
+  weight: 99
+

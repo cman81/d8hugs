@@ -6,3 +6,14 @@ hugs.hugs_controller_hug:
     _title: 'Hugs'
   requirements:
     _permission: 'access content'
+
+hugs.hug_config_form:
+  path: '/admin/config/hugs/hugconfig'
+  defaults:
+    _form: '\Drupal\hugs\Form\HugConfigForm'
+    _title: 'HugConfigForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
