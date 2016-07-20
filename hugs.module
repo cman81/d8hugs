@@ -27,7 +27,7 @@ function hugs_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_theme().
  * @return array
  */
-function hugs_theme($existing, $type, $theme, $path) {
+function hugs_theme() {
   $theme['hug_page'] = [
     'variables' => ['from' => NULL, 'to' => NULL],
     'template' => 'hug_page',
