@@ -18,12 +18,11 @@ class HugsController extends ControllerBase {
    *   Return Hello string.
    */
   public function hug($from, $to) {
-    $message = $this->t('%from sends hugs to %to', [
-      '%from' => $from,
-      '%to' => $to,
-    ]);
-
-    return ['#markup' => $message];
+    return [
+      '#theme' => 'hug_page',
+      '#from' => $from,
+      '#to' => $to,
+    ];
   }
 
 }
