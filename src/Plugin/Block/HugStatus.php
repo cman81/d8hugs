@@ -52,10 +52,11 @@ class HugStatus extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $build = [];
-    $build['hug_status_hugging_enabled']['#markup'] = '<p>' . $this->configuration['hugging_enabled'] . '</p>';
+    $message = $this->configuration['hugging_enabled']
+      ? $this->t('Now accepting hugs')
+      : $this->t('No hugs :-(');
 
-    return $build;
+    return ['#markup' => $message];
   }
 
 }
